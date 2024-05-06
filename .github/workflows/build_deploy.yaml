@@ -16,17 +16,11 @@ jobs:
         with:
           node-version: '18.x'
 
-      - name: Install Angular CLI
-        run: npm install -g @angular/cli
-
       - name: Install Deps
         run: npm install
 
       - name: Build Angular project
-        run: ng build --prod
-
-      - name: Copy dist files to deployment folder
-        run: cp -r dist/* deployment/
+        run: npm run build --prod
 
       - name: Deploy to web server
         uses: actions/upload-artifact@v3
