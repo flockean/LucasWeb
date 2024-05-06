@@ -22,17 +22,11 @@ jobs:
       - name: Build Angular project
         run: npm run build --prod
 
-      - name: Deploy to web server
-        uses: actions/upload-artifact@v3
-        with:
-          name: deployment
-          path: deployment
-
       - name:  Upload build artifacts
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
-          server: ${{ env.SERVER_HOST }}  # Replace with your server details
-          username: ${{ env.SERVER_USER }}
-          password: ${{ env.SERVER_KEY }}  # Use stored environment variable
+          server: ${{ secrets.SERVER_HOST }}  # Replace with your server details
+          username: ${{ secrets.SERVER_USER }}
+          password: ${{ secrets.SERVER_KEY }}  # Use stored environment variable
           local-dir: dist/lucas-web/browser/  # Directory containing built Angular files
 
