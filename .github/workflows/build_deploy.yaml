@@ -31,8 +31,8 @@ jobs:
       - name:  Upload build artifacts
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
-          server: '${{ env.SERVER_HOST }}'  # Replace with your server details
-          username: '${{ env.SERVER_USER }}'
-          password: '${{ env.SERVER_KEY }}'  # Use stored environment variable
+          server: ${{ env.SERVER_HOST }}  # Replace with your server details
+          username: ${{ env.SERVER_USER }}
+          password: ${{ env.SERVER_KEY }}  # Use stored environment variable
           local-dir: dist/lucas-web/browser/  # Directory containing built Angular files
 
