@@ -1,0 +1,12 @@
+.grid{
+  display: grid;
+}
+
+.card{
+  display: grid;
+  place-items: center;
+  border-radius: 10px;
+  background-color: var(--secondary-100);
+  padding: 50px;
+  margin: 50px;
+}
