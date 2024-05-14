@@ -1,5 +1,15 @@
 <div class="grid">
-  <div class="card">
+  <div *ngIf="!configService.isLoggedIn()" class="card">
+    <form>
     Bitte einmal einloggen!
+      <div [formGroup]="userForm" class="input-wrapper">
+      <input type="text" placeholder="Username" formControlName="username"/>
+      <input type="text" placeholder="Password" formControlName="password"/>
+      <button (click)="onSubmit()" > LogIn </button>
+      </div>
+    </form>
+  </div>
+  <div *ngIf="configService.isLoggedIn()" class="card">
+    You are already Logged In as: {{configService.getStoredUserData().username}}
   </div>
 </div>

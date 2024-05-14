@@ -1,11 +1,12 @@
 <div ></div>
-<div class="container center">
+<h1 class="container center">
   This is my wonderful ugly website, ITS IN DEVELOPMENT ;0
-</div>
-<div class="container">
-  <router-outlet/>
-</div>
+</h1>
+<router-outlet/>
 <nav id="navbar">
-  <button class="button" routerLink="MainPortal">Cheeseburger</button>
-  <button class="button" routerLink="LogIn">Cheeseburger</button>
+  <div id="navbar-items">
+    <button type="button" routerLink="MainPortal">CheeseburgerPortal</button>
+    <button class="button" routerLink="LogIn">Login</button>
+    <button class="button" (click)="configService.logout()">LogOut</button>
+  </div>
 </nav>
