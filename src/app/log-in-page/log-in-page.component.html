@@ -4,12 +4,17 @@
     Bitte einmal einloggen!
       <div [formGroup]="userForm" class="input-wrapper">
       <input type="text" placeholder="Username" formControlName="username"/>
-      <input type="text" placeholder="Password" formControlName="password"/>
+      <input type="password" placeholder="Password" formControlName="password"/>
       <button (click)="onSubmit()" > LogIn </button>
       </div>
     </form>
   </div>
+
+<!--  TODO: Hmmm yes, Security on Point-->
   <div *ngIf="configService.isLoggedIn()" class="card">
-    You are already Logged In as: {{configService.getStoredUserData().username}}
+    You are already Logged In as:
+    <h4 class="text-wrapper">{{configService.getStoredUserData().username}}</h4>
+    and your Password is:
+    <h4 class="text-wrapper"> {{configService.getStoredUserData().password}}</h4>
   </div>
 </div>
