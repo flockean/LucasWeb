@@ -5,8 +5,8 @@
 <router-outlet/>
 <nav id="navbar">
   <div id="navbar-items">
-    <button type="button" routerLink="MainPortal">CheeseburgerPortal</button>
+    <button *ngIf="configService.isLoggedIn()" type="button" routerLink="MainPortal">CheeseburgerPortal</button>
     <button class="button" routerLink="LogIn">Login</button>
-    <button class="button" (click)="configService.logout()">LogOut</button>
+    <button *ngIf="configService.isLoggedIn()" class="button" (click)="configService.logout()">LogOut</button>
   </div>
 </nav>
