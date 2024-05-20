@@ -1,10 +1,11 @@
 import {Injectable} from '@angular/core';
+import {Router} from "@angular/router";
 
 @Injectable({
   providedIn: 'root'
 })
 export class ConfigService {
-  constructor() {
+  constructor(private router: Router) {
   }
   // TODO: Own Service for localStorage
   login(username: string, password: string){
@@ -13,6 +14,7 @@ export class ConfigService {
       password: password
     };
     this.storeUserData(userData)
+    this.router.navigate(['/MainPortal'])
     return Promise.resolve(true);
   }
 
