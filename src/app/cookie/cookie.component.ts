@@ -16,11 +16,15 @@ export class CookieComponent {
   // TODO: Do I need a Dependency for CookieService? Uhhhh
   constructor(private cookieService: CookieService) {
     this.cookieService.set('MainCookie', 'This is your Cookie, no one else!')
-    this.cookieService.set('SecondCookie', "Well, this is your second Chocolate Cookie")
+    this.cookieService.set('SecondCookie', "Well, this is your second Chocolate Cookie, those can't be deleted yet")
   }
 
   getCookies() {
     const allCookies = this.cookieService.getAll()
     return JSON.stringify(allCookies)
+  }
+
+  clearAllCookies() {
+    this.cookieService.deleteAll()
   }
 }
