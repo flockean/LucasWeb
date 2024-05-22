@@ -8,5 +8,6 @@
     <button *ngIf="configService.isLoggedIn()" type="button" routerLink="MainPortal">CheeseburgerPortal</button>
     <button class="button" routerLink="LogIn">Login</button>
     <button *ngIf="configService.isLoggedIn()" class="button" (click)="configService.logout()">LogOut</button>
+    <button class="button" routerLink="Cookies">Cookies</button>
   </div>
 </nav>
