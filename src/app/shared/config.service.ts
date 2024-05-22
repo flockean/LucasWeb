@@ -1,13 +1,16 @@
 import {Injectable} from '@angular/core';
 import {Router} from "@angular/router";
+import {CookieService} from "ngx-cookie-service";
 
 @Injectable({
   providedIn: 'root'
 })
 export class ConfigService {
-  constructor(private router: Router) {
+  constructor(private router: Router,
+              private cookieService: CookieService) {
   }
   // TODO: Own Service for localStorage
+  // TODO: Please dont save Account in localStorage AND Cookies, wat de hell
   login(username: string, password: string){
     const userData = {
       username: username,
@@ -15,6 +18,7 @@ export class ConfigService {
     };
     this.storeUserData(userData)
     this.router.navigate(['/MainPortal'])
+    this.cookieService.set('YourAccountCookie', JSON.stringify(this.getStoredUserData()))
     return Promise.resolve(true);
   }
 
@@ -33,6 +37,7 @@ export class ConfigService {
 
   logout() {
     localStorage.removeItem('user');
+    this.cookieService.delete("YourAccountCookie")
   }
 
   isLoggedIn(): boolean {
