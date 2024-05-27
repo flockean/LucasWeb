@@ -12,7 +12,7 @@ import {ConfigService} from "./shared/config.service";
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
-  title = 'LucasWeb';
+  title = 'LB Development';
   protected readonly MainPortalComponent = MainPortalComponent;
 
   constructor(protected configService: ConfigService) {

@@ -1,11 +1,11 @@
 <div ></div>
 <h1 class="container center">
-  This is my wonderful ugly website, ITS IN DEVELOPMENT ;0
+  {{title}}
 </h1>
 <router-outlet/>
 <nav id="navbar">
   <div id="navbar-items">
-    <button *ngIf="configService.isLoggedIn()" class="button" routerLink="MainPortal">CheeseburgerPortal</button>
+    <button *ngIf="configService.isLoggedIn()" class="button" routerLink="MainPortal">Portfolio</button>
     <button class="button" routerLink="Cookies">Cookies</button>
     <button class="button" routerLink="LogIn">Login</button>
     <button *ngIf="configService.isLoggedIn()" class="button" (click)="configService.logout()">LogOut</button>
