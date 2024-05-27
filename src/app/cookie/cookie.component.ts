@@ -1,30 +1,24 @@
 import {Component} from '@angular/core';
 import {CookieService} from "ngx-cookie-service";
-import {NgForOf} from "@angular/common";
+import {CommonModule, KeyValuePipe, NgForOf} from "@angular/common";
 
 @Component({
   selector: 'app-cookie',
   standalone: true,
   imports: [
-    NgForOf
+    NgForOf,
+    KeyValuePipe,
+    CommonModule
   ],
   templateUrl: './cookie.component.html',
   styleUrl: './cookie.component.scss'
 })
 export class CookieComponent {
+  protected readonly Object = Object;
 
   // TODO: Do I need a Dependency for CookieService? Uhhhh
-  constructor(private cookieService: CookieService) {
-    this.cookieService.set('MainCookie', 'This is your Cookie, no one else!')
-    this.cookieService.set('SecondCookie', "Well, this is your second Chocolate Cookie, those can't be deleted yet")
+  constructor(protected cookieService: CookieService) {
+    this.cookieService.set('MainCookie', 'This is your MainCookie, so you can see the List works (cannot be deleted)')
   }
 
-  getCookies() {
-    const allCookies = this.cookieService.getAll()
-    return JSON.stringify(allCookies)
-  }
-
-  clearAllCookies() {
-    this.cookieService.deleteAll()
-  }
 }

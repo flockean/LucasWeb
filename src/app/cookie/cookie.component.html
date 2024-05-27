@@ -2,12 +2,11 @@
   <p>Do you Consent to Cookies, well, doesn't matter, it saves nothing yet</p>
   <div>
     Here are your Cookies:
-    <div class="text-wrapper"> {{getCookies()}} </div>
-
-    <div>
-      <button class="button" (click)="clearAllCookies()">ClearAllCookies</button>
+    <div class="text-wrapper" *ngFor="let key of Object.keys(this.cookieService.getAll())">
+      <span> {{key}}: {{this.cookieService.get(key)}}</span>
     </div>
-
-
+    <div>
+      <button class="button" (click)="this.cookieService.deleteAll()">ClearAllCookies</button>
+    </div>
   </div>
 </div>
