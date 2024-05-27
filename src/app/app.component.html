@@ -1,8 +1,9 @@
-<div ></div>
-<h1 class="container center">
-  {{title}}
-</h1>
-<router-outlet/>
+<div>
+  <h1 class="container center">
+    {{title}}
+  </h1>
+  <router-outlet/>
+</div>
 <nav id="navbar">
   <div id="navbar-items">
     <button *ngIf="configService.isLoggedIn()" class="button" routerLink="MainPortal">Portfolio</button>
@@ -11,3 +12,4 @@
     <button *ngIf="configService.isLoggedIn()" class="button" (click)="configService.logout()">LogOut</button>
   </div>
 </nav>
+
