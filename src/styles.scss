@@ -6,6 +6,10 @@
   --backround-150: #F8F8FF;
 }
 
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
  /* CSS */
 .button {
  align-items: center;
