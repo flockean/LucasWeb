@@ -1,12 +1,12 @@
-<div class="container">
-  <p>Do you Consent to Cookies, well, doesn't matter, it saves nothing yet</p>
+<div class="basebob">
+  <div class="flex place-items-center justify-center">
+  Here are listed all Cookies that been stored on this side
+  </div>
   <div>
     Here are your Cookies:
-    <div class="text-wrapper" *ngFor="let key of Object.keys(this.cookieService.getAll())">
+    <div class="border-2 border-black my-2 p-2 rounded-full bg-sky-300" *ngFor="let key of Object.keys(this.cookieService.getAll())">
       <span> {{key}}: {{this.cookieService.get(key)}}</span>
     </div>
-    <div>
-      <button class="button" (click)="this.cookieService.deleteAll()">ClearAllCookies</button>
-    </div>
+    <button class="button" (click)="this.cookieService.deleteAll()">ClearAllCookies</button>
   </div>
 </div>
