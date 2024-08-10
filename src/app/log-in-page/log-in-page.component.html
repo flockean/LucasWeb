@@ -1,23 +1,24 @@
-<div class="grid">
-  <div *ngIf="!configService.isLoggedIn()" class="card">
+<div class="basebob">
+  <div *ngIf="!configService.isLoggedIn()" class="grid place-items-center m-2 p-2">
 
-    <div class="container">This Login is unsecure, so you can login with anything you want or just press login. Still do not insert personal Data! </div>
-    <div>
+    This Login is unsecure, so you can login with anything you want or just press login.
+    <div> DO NOT INSERT PERSONAL DATA </div>
+    <div class="m-8">
     <form>
-      <div [formGroup]="userForm" class="input-wrapper">
+      <div [formGroup]="userForm" class="grid gap-4">
       <input type="text" placeholder="Username" formControlName="username"/>
       <input type="password" placeholder="Password" formControlName="password"/>
-      <button (click)="onSubmit()" > LogIn </button>
+      <button class="button" (click)="onSubmit()" > LogIn </button>
       </div>
     </form>
     </div>
   </div>
 
 <!--  TODO: Hmmm yes, Security on Point-->
-  <div *ngIf="configService.isLoggedIn()" class="card">
+  <div *ngIf="configService.isLoggedIn()" class="grid place-items-center m-2 p-2">
     You are already Logged In as:
-    <h4 class="text-wrapper">{{configService.getStoredUserData().username}}</h4>
+    <div class="font-bold">{{configService.getStoredUserData().username}} </div>
     and your Password is:
-    <h4 class="text-wrapper"> {{configService.getStoredUserData().password}}</h4>
+    <div class="font-bold"> {{configService.getStoredUserData().password}} </div>
   </div>
 </div>
