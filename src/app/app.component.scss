@@ -3,17 +3,11 @@
   place-items: center;
 }
 
-#navbar{
+.navbar{
   display: grid;
   place-items: center;
-  background-color: var(--secondary-100);
-  width: 95%;
   position: absolute;
-  padding: 10px;
-  margin: 20px;
   bottom: 0;
-  right: 0;
-  border-radius: 5px;
 }
 
 #navbar-items{

@@ -2,6 +2,7 @@ import {Injectable} from '@angular/core';
 import {Router} from "@angular/router";
 import {CookieService} from "ngx-cookie-service";
 import {LocalStorageService} from "./local-storage.service";
+import { timestamp } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -19,7 +20,8 @@ export class ConfigService {
     };
     this.storageService.setItem('user', userData)
     this.router.navigate(['/MainPortal'])
-    this.cookieService.set('YourAccountCookie', JSON.stringify(this.getStoredUserData()))
+    const time = new Date().toLocaleString()
+    this.cookieService.set('YourAccountCookie', `User has been Logged in at: ${time}`)
     return Promise.resolve(true);
   }
 
