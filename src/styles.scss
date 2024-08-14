@@ -1,6 +1,36 @@
-:root {
-  --primary-100: #90AFC5;
-  --secondary-100: #336B87;
-  --text-100: #2A3132;
-  --backround-100: #763626;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+ /* CSS */
+.button {
+  padding: 0.25rem;
+  padding-right: 1rem;
+  padding-left: 1rem;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+  background: rgb(12, 74, 110);
+  border: black 2px solid;
+  border-radius: 1rem;
+  font-family: Bahnschrift;
+  color: whitesmoke;
+}
+
+
+.button:hover {
+  background-color: rgb(7, 89, 133);
+  transform: scale(0.95);
+}
+
+.button:active {
+  transform: scale(0.9);
+}
+
+.basebob{
+  font-family: Bahnschrift, sans-serif;
+  background-color: rgb(186, 230, 253);
+  border: 0.25rem solid rgb(224, 242, 254);
+  border-radius: 1rem;
+  margin: 1rem;
+  padding: 1rem;
 }
