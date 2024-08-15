@@ -1,9 +1,9 @@
-<div class="p-4 m-4 bg-sky-500 rounded-md">
+ <div class="p-4 m-4 bg-sky-500 rounded-md">
   <div class="flex items-center justify-center font-bold text-lg"> {{title}} </div>
 </div>
-
-<router-outlet/>
-
+<div class="">
+  <router-outlet/>
+<div>
 
 <div class="flex items-center justify-center p-16 m-16">
   <nav class="navbar w-5/6 rounded-xl flex p-4 m-6 bg-sky-500 box-border">
@@ -12,6 +12,7 @@
       <button class="button" routerLink="Cookies">Cookies</button>
       <button class="button" routerLink="LogIn">Login</button>
       <button *ngIf="configService.isLoggedIn()" class="button" (click)="configService.logout()">LogOut</button>
+      <div class="animate-bounce animate-pulse"> 👻 </div>
    </div>
   </nav>
 </div>
