@@ -7,6 +7,6 @@
     <div class="border-2 border-black my-2 p-2 rounded-full bg-sky-300" *ngFor="let key of Object.keys(this.cookieService.getAll())">
       <span> {{key}}: {{this.cookieService.get(key)}}</span>
     </div>
-    <button class="button" (click)="this.cookieService.deleteAll()">ClearAllCookies</button>
+    <button (click)="this.cookieService.deleteAll()">ClearAllCookies</button>
   </div>
 </div>
