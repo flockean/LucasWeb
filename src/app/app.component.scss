@@ -1,18 +1,3 @@
-.center{
-  display: grid;
-  place-items: center;
+.jersey{
+  font-family: jersey;
 }
-
-.navbar{
-  display: grid;
-  place-items: center;
-  position: absolute;
-  bottom: 0;
-}
-
-#navbar-items{
-  display: flex;
-  place-self: center;
-  gap: 20px;
-}
-

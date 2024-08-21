@@ -2,8 +2,22 @@
 @tailwind components;
 @tailwind utilities;
 
+
+@layer base {
+  @font-face {
+    font-family: 'Jersey';
+    src: url(assets/Jersey10-Regular.ttf) format('ttf');
+  }
+  @font-face{
+    font-family: 'Anton';
+    src: url(assets/Anton-Regular.ttf) format('ttf');
+  }
+}
+
+
+
  /* CSS */
-.button {
+button {
   padding: 0.25rem;
   padding-right: 1rem;
   padding-left: 1rem;
@@ -17,18 +31,17 @@
 }
 
 
-.button:hover {
+button:hover {
   background-color: rgb(7, 89, 133);
   transform: scale(0.95);
 }
 
-.button:active {
+button:active {
   transform: scale(0.9);
 }
 
 .basebob{
   font-family: Bahnschrift, sans-serif;
-  background-color: rgb(186, 230, 253);
   border: 0.25rem solid rgb(224, 242, 254);
   border-radius: 1rem;
   margin: 1rem;

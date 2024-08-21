@@ -1,21 +1,30 @@
 import { Routes } from '@angular/router';
 import {MainPortalComponent} from "./main-portal/main-portal.component";
 import {LogInPageComponent} from "./log-in-page/log-in-page.component";
-import {AuthGuard} from "./app.guard";
+import {logInRequired} from "./app.guard";
 import {CookieComponent} from "./cookie/cookie.component";
+import { ManagementViewComponent } from './management-view/management-view.component';
 
 export const routes: Routes = [
   {
-    path: "MainPortal",
-    canActivate: [AuthGuard],
+    path: "mainportal",
     component: MainPortalComponent
   },
   {
-    path: "LogIn",
+    path: "login",
     component: LogInPageComponent
   },
   {
-    path: "Cookies",
+    path: "cookies",
     component: CookieComponent
+  },
+  {
+    path: "mgmt",
+    component: ManagementViewComponent,
+    canActivate: [logInRequired]
+  },
+  {
+    path: "**",
+    component: MainPortalComponent
   }
 ];
