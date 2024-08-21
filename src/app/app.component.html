@@ -1,5 +1,11 @@
-<div class="p-4 m-4 bg-sky-500 rounded-md">
-  <div class="flex items-center justify-center font-bold text-lg"> {{title}} </div>
+<div class="pt-8 bg-sky-400 shadow-lg">
+  <div class="flex items-center justify-center font-bold text-4xl pb-7 shadow-lg shadow-yellow-500"> {{title}} </div>
+  <div class="p-4 bg-sky-300 w-full">
+  <div class="inline-flex">
+      <div *ngIf=configService.isLoggedIn() class="font-bold"> {{configService.getStoredUserData().username}} </div>
+      <div *ngIf=configService.isLoggedIn() class="font-bold"> Permissions: {{configService.getStoredUserData().Permissions}} </div>
+  </div>
+  </div>
 </div>
 <div class="">
   <router-outlet/>
