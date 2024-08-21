@@ -16,7 +16,7 @@ export class ConfigService {
     const userData : Profile = {
       username: username,
       password: password,
-      permission: 'READ'
+      permission: Permission.READ
     };
     this.storageService.setItem('user', userData)
     this.router.navigate(['/MainPortal'])
@@ -35,7 +35,7 @@ export class ConfigService {
   }
 
   isLoggedIn(): boolean {
-    return !!this.getStoredUserData
+    return !!this.getStoredUserData()
   }
 
 }
@@ -44,7 +44,7 @@ export class ConfigService {
 export interface Profile{
   username: string;
   password: string;
-  permission: string;
+  permission: Permission;
 }
 
 enum Permission{
