@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
 import { ReactiveFormsModule, FormBuilder, Validators } from '@angular/forms';
+import { ContainerBlockComponent } from '../components/container-block/container-block.component';
 
 @Component({
   selector: 'app-management-view',
   standalone: true,
-  imports: [ReactiveFormsModule],
+  imports: [ReactiveFormsModule, ContainerBlockComponent],
   templateUrl: './management-view.component.html',
   styleUrl: './management-view.component.scss'
 })

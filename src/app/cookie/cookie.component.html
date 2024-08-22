@@ -1,12 +1,9 @@
-<div class="basebob">
-  <div class="flex place-items-center justify-center">
-  Here are listed all Cookies that been stored on this side
+<app-container-block title="Cookies">
+<div>
+  Here are all Cookies that have been stored since you're here:
+  <div class="border-2 border-black my-2 p-2 rounded-full bg-sky-300" *ngFor="let key of Object.keys(this.cookieService.getAll())">
+    <span> {{key}}: {{this.cookieService.get(key)}}</span>
   </div>
-  <div>
-    Here are your Cookies:
-    <div class="border-2 border-black my-2 p-2 rounded-full bg-sky-300" *ngFor="let key of Object.keys(this.cookieService.getAll())">
-      <span> {{key}}: {{this.cookieService.get(key)}}</span>
-    </div>
-    <button (click)="this.cookieService.deleteAll()">ClearAllCookies</button>
-  </div>
+  <button (click)="this.cookieService.deleteAll()">ClearAllCookies</button>
 </div>
+</app-container-block>
