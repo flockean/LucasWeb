@@ -1,8 +1,31 @@
 <div class="basebob">
-  Here will be the Managment of my Projects... someday
+  Management of Projects and Services, here you can create, modify and delete Projects in the Database
 </div>
-<div class="p-2 m2 border-black bg-sky-400">
-  <div>
 
+<!-- TODO: This css style is used in multiple components, abstract this container in new component --->
+<div class="grid m-2 bg-sky-300 rounded-lg shadow-lg">
+  <div class="my-2 place-self-center"> Create New Service </div>
+  <div class="grid bg-sky-200 rounded-b-lg p-2" >
+    <form class="flex">
+      <div [formGroup]="serviceForm" class="grid gap-4 w-2/4 p-4">
+        <input type=text placeholder="Service Name">
+        <input type=text placeholder="Service Type">
+        <input type=text placeholder="Service Languages">
+      </div>
+      <div class="grid gap-4 w-1/2 p-4">
+        <div class="h-1/2 border-gray-500 border-dashed border-2 place-content-center text-center"> Insert Representativ Picture ;) </div>
+      </div>
+    </form>
+  </div>
+</div>
+
+<div class="grid m-2 bg-sky-300 rounded-lg shadow-lg">
+<div class="my-2 place-self-center"> Create New Project </div>
+  <div class="grid bg-sky-200 rounded-b-lg p-2">
+    <form>
+      <div [formGroup]="projectForm" class="grid gap-4 w-2/4 p-4">
+        --PlaceHolder--
+      </div>
+    </form>
   </div>
 </div>
