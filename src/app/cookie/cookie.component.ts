@@ -1,6 +1,7 @@
 import {Component} from '@angular/core';
 import {CookieService} from "ngx-cookie-service";
 import {CommonModule, KeyValuePipe, NgForOf} from "@angular/common";
+import { ContainerBlockComponent } from '../components/container-block/container-block.component';
 
 @Component({
   selector: 'app-cookie',
@@ -8,7 +9,8 @@ import {CommonModule, KeyValuePipe, NgForOf} from "@angular/common";
   imports: [
     NgForOf,
     KeyValuePipe,
-    CommonModule
+    CommonModule,
+    ContainerBlockComponent
   ],
   templateUrl: './cookie.component.html',
   styleUrl: './cookie.component.scss'
