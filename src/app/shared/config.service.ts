@@ -11,6 +11,7 @@ export class ConfigService {
               private cookieService: CookieService,
               private storageService: LocalStorageService) {
   }
+
   // TODO: Please dont save Account in localStorage AND Cookies, wat de hell
   login(username: string, password: string){
     const userData : Profile = {
