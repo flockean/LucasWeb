@@ -1,5 +1,5 @@
 <div class="flex items-center justify-center p-16">
-  <nav class="grid place-items-center absolute bottom-0 w-full p-4 bg-sky-500 box-border">
+  <nav class="grid place-items-center fixed bottom-0 w-full p-4 bg-sky-500 box-border">
     <div class="flex place-self-center gap-5">
       <button routerLink="mainportal">Portfolio</button>
       <button *ngIf="configService.isLoggedIn()" routerLink="mgmt"> Project Managment </button>
