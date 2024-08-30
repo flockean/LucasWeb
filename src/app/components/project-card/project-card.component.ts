@@ -21,13 +21,15 @@ export class ProjectCardComponent {
 
 
   this.httpClient.get<RootResponse>(this.projectsPath).subscribe((data) => {
+    console.log(data)
       this.projects = data.projects
-      this.services = data.services
+      this.services = data.service
       console.log("Data received")
     })
   }
 
   filterServiceToProject(project_id: number): Service[] {
+    console.log(this.services.filter(service => service.project === project_id))
     return this.services.filter(service => service.project === project_id)
   }
 
@@ -36,7 +38,7 @@ export class ProjectCardComponent {
 export interface RootResponse{
   _comment: string,
   projects: Project[],
-  services: Service[]
+  service: Service[]
 
 }
 
