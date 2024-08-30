@@ -1,0 +1,39 @@
+{
+  "_comment": "This json file should do it at first, file will be deleted after api with database is done ;0",
+  "projects": [
+    {
+      "project_id": 1,
+      "name": "LucasWebServer",
+      "description": "The LucasWebServer is the first Project to manage my Projects (including this one) for gaining Experince on Frontend, Backend and deployment on Webserver all on my own",
+      "logo": "null"
+    },
+    {
+      "project_id": 2,
+      "name": "DiscordBot",
+      "description": "The Discordbot is construkted for simple tasks eg. messaging a friend, send gifs or set Alerts for important Events"
+    }
+  ],
+  "service":[
+    {
+      "service_id": 1,
+      "name": "LucasWebApi",
+      "lang": "Golang",
+      "focus": "Backend, Database, Postgres",
+      "project": 1
+    },
+    {
+      "service_id": 2,
+      "name": "LucasWeb",
+      "lang": "HTML, SCSS, Typescript",
+      "focus": "Frontend, Angular",
+      "project": 1
+    },
+    {
+      "service_id": 3,
+      "name": "Snowflake",
+      "lang": "Python",
+      "focus": "DiscordAPI, Management",
+      "project": 2
+    }
+  ]
+}
