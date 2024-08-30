@@ -6,6 +6,11 @@
       "name": "LucasWebServer",
       "description": "The LucasWebServer is the first Project to manage my Projects (including this one) for gaining Experince on Frontend, Backend and deployment on Webserver all on my own",
       "logo": "null"
+    },
+    {
+      "project_id": 2,
+      "name": "DiscordBot",
+      "description": "The Discordbot is construkted for simple tasks eg. messaging a friend, send gifs or set Alerts for important Events"
     }
   ],
   "service":[
@@ -22,6 +27,13 @@
       "lang": "HTML, SCSS, Typescript",
       "focus": "Frontend, Angular",
       "project": 1
+    },
+    {
+      "service_id": 3,
+      "name": "Snowflake",
+      "lang": "Python",
+      "focus": "DiscordAPI, Management",
+      "project": 2
     }
   ]
 }
