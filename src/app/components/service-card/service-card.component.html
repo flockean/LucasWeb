@@ -1,3 +1,5 @@
-<div class="grid border-2 border-black rounded-s p-2 m-2">
-  Service X
+<div *ngFor="let service for services" class="grid border-2 border-black rounded-s p-2 m-2">
+  <div> {{service.name}} </div>
+  <div> {{service.lang}} </div>
+  <div> {{service.focus}} </div>
 <div>

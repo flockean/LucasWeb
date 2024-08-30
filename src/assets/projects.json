@@ -1,0 +1,27 @@
+{
+  "_comment": "This json file should do it at first, file will be deleted after api with database is done ;0",
+  "projects": [
+    {
+      "project_id":1,
+      "name": "LucasWebServer",
+      "description": "The LucasWebServer is the first Project to manage my Projects (including this one) for gaining Experince on Frontend, Backend and deployment on Webserver all on my own",
+      "logo": "null"
+    }
+  ],
+  "service":[
+    {
+      "service_id":1,
+      "name": "LucasWebApi",
+      "lang": "go",
+      "focus": "Backend, Database, Postgres",
+      "project": 1
+    },
+    {
+      "service_id":2,
+      "name": "LucasWeb",
+      "lang": "Html, Sccs, Typescript",
+      "focus": "Frontend, Angular",
+      "project": 1
+    }
+  ]
+}
