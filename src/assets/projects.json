@@ -10,8 +10,14 @@
     {
       "project_id": 2,
       "name": "DiscordBot",
-      "description": "The Discordbot is construkted for simple tasks eg. messaging a friend, send gifs or set Alerts for important Events"
+      "description": "The Discordbot is constructed for simple tasks eg. messaging a friend, send gifs or set Alerts for important Events"
+    },
+    {
+      "project_id":3,
+      "name": "SquadMandalore",
+      "description": "SquadMandalore is our Scrum Team of multiple (~8) intelligent and motivated students in which developed multiple (at the moment two) Applications to present in the University or as Exam for Single Modules (*Note: 1 Service is a whole Application)"
     }
+
   ],
   "service":[
     {
@@ -34,6 +40,20 @@
       "lang": "Python",
       "focus": "DiscordAPI, Management",
       "project": 2
+    },
+    {
+      "service_id": 4,
+      "name": "SchoolAthletesManagement",
+      "lang": "HTML, SCSS, Typescript, Python",
+      "focus": "Angular, FastAPI, Docker",
+      "project": 3
+    },
+    {
+      "service_id": 5,
+      "name": "TimeTrackingApp",
+      "lang": "Rust, Dart",
+      "focus": "Flutter, GraphQL",
+      "project":3
     }
   ]
 }

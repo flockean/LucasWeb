@@ -1,8 +1,14 @@
 <div class="basebob">
   Management of Projects and Services, here you can create, modify and delete Projects in the Database
 </div>
-
-<!-- TODO: This css style is used in multiple components, abstract this container in new component --->
+<div class="flex" >
+    <app-container-block title="Placeholder Container" class="w-1/2 h-full items-stretch">
+        Description
+      <div class="mt-4">
+        This is a Placeholder for next Ideads I want to place here!
+      </div>
+  </app-container-block>
+<div class="w-1/2">
   <app-container-block title="Create New Service">
     <form class="flex">
       <div [formGroup]="serviceForm" class="grid gap-4 w-2/4 p-4">
@@ -11,15 +17,19 @@
         <input type=text placeholder="Service Languages">
       </div>
       <div class="grid gap-4 w-1/2 p-4">
-        <div class="h-1/2 border-gray-500 border-dashed border-2 place-content-center text-center"> Insert Representativ Picture ;) </div>
+        <div class="h-full border-gray-500 border-dashed border-2 place-content-center text-center"> Insert Representativ Picture ;) </div>
       </div>
     </form>
+  <button class="w-1/4 place-self-end"> Create New Service </button>
   </app-container-block>
 
 <app-container-block title="Create New Project">
-  <form>
-    <div [formGroup]="projectForm" class="grid gap-4 w-2/4 p-4">
-      --PlaceHolder--
-    </div>
-  </form>
+    <form>
+      <div [formGroup]="projectForm" class="grid gap-4 w-2/4 p-4">
+        --PlaceHolder--
+      </div>
+    </form>
+  <button class="w-1/4 place-self-end">Create New Project</button>
 </app-container-block>
+  </div>
+</div>
