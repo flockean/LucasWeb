@@ -10,7 +10,7 @@
     {
       "project_id": 2,
       "name": "DiscordBot",
-      "description": "The Discordbot is construkted for simple tasks eg. messaging a friend, send gifs or set Alerts for important Events"
+      "description": "The Discordbot is constructed for simple tasks eg. messaging a friend, send gifs or set Alerts for important Events"
     }
   ],
   "service":[
