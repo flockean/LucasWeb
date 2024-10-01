@@ -1,14 +1,13 @@
-<div class="pt-8 bg-sky-300 shadow-lg">
+<div class="pt-8 bg-sky-300 shadow-lg opacity-80">
   <div class="flex items-center justify-center font-bold text-4xl pb-7"> {{title}} </div>
   <div class="p-4 bg-sky-200 w-full">
-  <div class="inline-flex gap-4">
+    <div class="inline-flex gap-4">
       <div *ngIf=configService.isLoggedIn() class="font-bold"> {{configService.getStoredUserData().username}} </div>
       <div *ngIf=configService.isLoggedIn() class="font-bold text-red-500"> {{configService.getStoredUserData().permission}} </div>
-  </div>
+    </div>
   </div>
 </div>
-<div class="basebob bg-sky-100">
+<div class="station pt-8">
   <router-outlet/>
-<div>
-
-<app-navibar/>
+  <app-navibar/>
+</div>
