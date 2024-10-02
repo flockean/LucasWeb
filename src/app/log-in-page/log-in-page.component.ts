@@ -2,6 +2,7 @@ import {Component} from '@angular/core';
 import {FormBuilder, ReactiveFormsModule, Validators} from "@angular/forms";
 import {ConfigService} from "../shared/config.service";
 import {NgIf} from "@angular/common";
+import { ContainerBlockComponent } from '../components/container-block/container-block.component';
 
 
 @Component({
@@ -9,7 +10,8 @@ import {NgIf} from "@angular/common";
   standalone: true,
   imports: [
     ReactiveFormsModule,
-    NgIf
+    NgIf,
+    ContainerBlockComponent
   ],
   templateUrl: './log-in-page.component.html',
   styleUrl: './log-in-page.component.scss'
