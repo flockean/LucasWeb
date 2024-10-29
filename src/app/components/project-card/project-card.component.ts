@@ -1,44 +1,28 @@
-import { Component } from '@angular/core';
-import { ServiceCardComponent} from '../service-card/service-card.component';
-import { HttpClient } from '@angular/common/http';
-import { NgFor } from '@angular/common';
+import {Component, Input} from '@angular/core';
+import {ServiceCardComponent} from '../service-card/service-card.component';
+import {NgFor, NgIf} from '@angular/common';
 
 @Component({
   selector: 'app-project-card',
   standalone: true,
-  imports: [ServiceCardComponent, NgFor],
+  imports: [ServiceCardComponent, NgFor, NgIf],
   templateUrl: './project-card.component.html',
   styleUrl: './project-card.component.scss'
 })
 export class ProjectCardComponent {
 
-  protected readonly projectsPath: string = "assets/projects.json"
 
-  public projects: Project[] = []
-  public services: Service[] = []
+  @Input() public project: Project | undefined
 
-  constructor(private httpClient: HttpClient) {
-
-
-  this.httpClient.get<RootResponse>(this.projectsPath).subscribe((data) => {
-    console.log(data)
-      this.projects = data.projects
-      this.services = data.service
-      console.log("Data received")
-    })
+  constructor() {
   }
 
-  filterServiceToProject(project_id: number): Service[] {
-    console.log(this.services.filter(service => service.project === project_id))
-    return this.services.filter(service => service.project === project_id)
-  }
 
 }
 
 export interface RootResponse{
   _comment: string,
   projects: Project[],
-  service: Service[]
 
 }
 
@@ -47,6 +31,7 @@ export interface Project {
   name: string,
   description: string,
   logo: BinaryData | undefined
+  services: Service[]
 }
 
 export interface Service {
