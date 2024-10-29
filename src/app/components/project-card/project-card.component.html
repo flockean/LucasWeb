@@ -1,9 +1,11 @@
-<div *ngFor="let project of projects" class="grid border-2 border-black rounded-lg w-auto bg-sky-100 p-2">
-    <div class="font-bold mb-8"> {{project.name}} </div>
-    <div class="text-sm">
-    {{project.description}}
-    </div>
-    <div class="flex wrap gap-2">
-      <app-service-card [services]=filterServiceToProject(project.project_id) />
-    </div>
-</div>
+<ng-container *ngIf=project>
+  <div class="border-2 border-black rounded-lg bg-sky-100 p-2">
+      <div class="font-bold mb-8 place-self-center"> {{project!.name}} </div>
+      <div class="text-sm min-w-60 max-w-80">
+      {{project!.description}}
+      </div>
+      <div class="flex justify-center wrap gap-2">
+        <app-service-card [services]=project!.services />
+      </div>
+  </div>
+</ng-container>

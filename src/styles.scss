@@ -19,20 +19,18 @@
   z-index: 0;
   width: 100%;
   height: 100%;
-  position: absolute;
 }
 
  /* CSS */
 button {
   padding: 0.25rem;
-  padding-right: 1rem;
-  padding-left: 1rem;
-  margin-left: 0.5rem;
-  margin-right: 0.5rem;
+  margin-left: 0.25rem;
+  margin-right: 0.25rem;
   background: rgb(12, 74, 110);
   border: black 2px solid;
   border-radius: 1rem;
-  font-family: Bahnschrift;
+  text-align: center;
+  font-family: Bahnschrift, serif;
   color: whitesmoke;
 }
 
@@ -48,4 +46,5 @@ button:active {
 
 div{
   font-family: Bahnschrift, sans-serif;
+  font-size: 100%;
 }

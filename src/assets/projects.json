@@ -5,55 +5,55 @@
       "project_id": 1,
       "name": "LucasWebServer",
       "description": "The LucasWebServer is the first Project to manage my Projects (including this one) for gaining Experince on Frontend, Backend and deployment on Webserver all on my own",
-      "logo": "null"
+      "logo": "null",
+      "services":[
+        {
+          "service_id": 1,
+          "name": "LucasWebApi",
+          "lang": "Golang",
+          "focus": "Backend, Database, Postgres",
+          "project": 1
+        },{
+          "service_id": 2,
+          "name": "LucasWeb",
+          "lang": "HTML, SCSS, Typescript",
+          "focus": "Frontend, Angular",
+          "project": 1
+        }]
     },
     {
       "project_id": 2,
       "name": "DiscordBot",
-      "description": "The Discordbot is constructed for simple tasks eg. messaging a friend, send gifs or set Alerts for important Events"
+      "description": "The Discordbot is constructed for simple tasks eg. messaging a friend, send gifs or set Alerts for important Events",
+      "services": [
+        {
+        "service_id": 3,
+        "name": "Snowflake",
+        "lang": "Python",
+        "focus": "DiscordAPI, Management",
+        "project": 2
+      }]
     },
     {
       "project_id":3,
       "name": "SquadMandalore",
-      "description": "SquadMandalore is our Scrum Team of multiple (~8) intelligent and motivated students in which developed multiple (at the moment two) Applications to present in the University or as Exam for Single Modules (*Note: 1 Service is a whole Application)"
-    }
-
-  ],
-  "service":[
-    {
-      "service_id": 1,
-      "name": "LucasWebApi",
-      "lang": "Golang",
-      "focus": "Backend, Database, Postgres",
-      "project": 1
-    },
-    {
-      "service_id": 2,
-      "name": "LucasWeb",
-      "lang": "HTML, SCSS, Typescript",
-      "focus": "Frontend, Angular",
-      "project": 1
-    },
-    {
-      "service_id": 3,
-      "name": "Snowflake",
-      "lang": "Python",
-      "focus": "DiscordAPI, Management",
-      "project": 2
-    },
-    {
-      "service_id": 4,
-      "name": "SchoolAthletesManagement",
-      "lang": "HTML, SCSS, Typescript, Python",
-      "focus": "Angular, FastAPI, Docker",
-      "project": 3
-    },
-    {
-      "service_id": 5,
-      "name": "TimeTrackingApp",
-      "lang": "Rust, Dart",
-      "focus": "Flutter, GraphQL",
-      "project":3
+      "description": "SquadMandalore is our Scrum Team of multiple (~8) intelligent and motivated students in which developed multiple (at the moment two) Applications to present in the University or as Exam for Single Modules (*Note: 1 Service is a whole Application)",
+      "services": [{
+        "service_id": 4,
+        "name": "SchoolAthletesManagement",
+        "lang": "HTML, SCSS, Typescript, Python",
+        "focus": "Angular, FastAPI, Docker",
+        "project": 3
+      },
+        {
+          "service_id": 5,
+          "name": "TimeTrackingApp",
+          "lang": "Rust, Dart",
+          "focus": "Flutter, GraphQL",
+          "project":3
+        }
+      ]
     }
   ]
 }
+

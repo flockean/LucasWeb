@@ -7,9 +7,7 @@
       This is my Website for managing my Projects and get finally on track with my Brain and achievements that I want to do the next few years.
       So here is the List of my running Projects and Learnings:
     </div>
-  <div class="grid pt-4">
-    <div class="flex">
-      <app-project-card class="flex gap-2"/>
-    </div>
+  <div class="flex flex-wrap gap-2">
+    <app-project-card *ngFor="let project of projects" [project]=project class="flex"/>
   </div>
 </app-container-block>
