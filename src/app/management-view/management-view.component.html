@@ -2,35 +2,31 @@
   <div> Information xxx, Connection-Status, Api Avaliable </div>
 </app-container-block>
 
-<div class="flex" >
-    <app-container-block title="Placeholder Container" class="w-1/2 h-full items-stretch">
-        Description
-      <div class="mt-4">
-        This is a Placeholder for next Ideads I want to place here!
-      </div>
-  </app-container-block>
-<div class="w-1/2">
-  <app-container-block title="Create New Service">
-    <form class="flex">
-      <div [formGroup]="serviceForm" class="grid gap-4 w-2/4 p-4">
-        <input type=text placeholder="Service Name">
-        <input type=text placeholder="Service Type">
-        <input type=text placeholder="Service Languages">
-      </div>
-      <div class="grid gap-4 w-1/2 p-4">
-        <div class="h-full border-gray-500 border-dashed border-2 place-content-center text-center"> Insert Representativ Picture ;) </div>
-      </div>
-    </form>
-  <button class="w-1/4 place-self-end"> Create New Service </button>
-  </app-container-block>
+<div class="flex flex-wrap justify-center">
+    <app-container-block title="Placeholder Container" class="w-1/2 h-full items-stretch text-center">
+      Description
+      <div class="mt-4"> This is a Placeholder for next Ideads I want to place here! </div>
+    </app-container-block>
 
-<app-container-block title="Create New Project">
-    <form>
-      <div [formGroup]="projectForm" class="grid gap-4 w-2/4 p-4">
-        --PlaceHolder--
-      </div>
-    </form>
-  <button class="w-1/4 place-self-end">Create New Project</button>
-</app-container-block>
-  </div>
+
+  <app-container-block class="flex flex-wrap justify-center " title="Create New Project">
+    <div class="flex justify-center">
+      <form>
+        <div [formGroup]="projectForm" class="grid gap-4 p-4"> PlaceHolder </div>
+      </form>
+    </div>
+    <button class="flex justify-center">Create New Project</button>
+
+    <app-container-block title="Create New Service">
+      <form [formGroup]="serviceForm" class="flex flex-wrap">
+        <div class="grid gap-4 w-1/2 p-4">
+          <input type=text placeholder="Service Name">
+          <input type=text placeholder="Service Type">
+          <input type=text placeholder="Service Languages">
+        </div>
+      </form>
+      <button class="flex justify-center"> Create New Service </button>
+    </app-container-block>
+  </app-container-block>
 </div>
+
